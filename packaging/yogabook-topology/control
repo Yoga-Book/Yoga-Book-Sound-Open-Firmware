@@ -1,0 +1,10 @@
+Package: sof-topology-yogabook
+Version: 1.0.0
+Section: non-free-firmware/sound
+Priority: optional
+Architecture: all
+Maintainer: Yoga Book Linux Project <noreply@github.com>
+Depends: firmware-sof-signed
+Description: SOF RT5677 topology for the Lenovo Yoga Book YB1-X91L
+ Installs the physically validated IPC3 SOF topology used by the Lenovo Yoga
+ Book YB1-X91L RT5677 audio machine driver.
