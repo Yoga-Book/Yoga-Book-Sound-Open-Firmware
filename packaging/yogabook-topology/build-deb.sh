@@ -34,8 +34,16 @@ package_root=$build_directory/root
 script_directory=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 install -D -m 0644 "$topology_file" \
 	"$package_root/usr/lib/firmware/intel/sof-tplg/sof-cht-rt5677.tplg"
+install -D -m 0644 "$script_directory/copyright" \
+	"$package_root/usr/share/doc/sof-topology-yogabook/copyright"
+install -d -m 0755 "$package_root/usr/share/doc/sof-topology-yogabook"
+gzip -n -9 -c "$script_directory/changelog" > \
+	"$package_root/usr/share/doc/sof-topology-yogabook/changelog.gz"
+chmod 0644 "$package_root/usr/share/doc/sof-topology-yogabook/changelog.gz"
 install -D -m 0644 "$script_directory/control" "$package_root/DEBIAN/control"
+(cd "$package_root" && find usr -type f -print0 | sort -z | xargs -0 md5sum) \
+	>"$package_root/DEBIAN/md5sums"
 find "$package_root" -exec touch --date="@$package_epoch" {} +
 mkdir -p "$output_directory"
 SOURCE_DATE_EPOCH=$package_epoch dpkg-deb --root-owner-group --build "$package_root" \
-	"$output_directory/sof-topology-yogabook_1.0.0_all.deb"
+	"$output_directory/sof-topology-yogabook_1.0.1_all.deb"

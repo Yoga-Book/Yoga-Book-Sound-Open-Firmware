@@ -1,0 +1,12 @@
+sof-topology-yogabook (1.0.1) unstable; urgency=medium
+
+  * Include copyright, license, changelog and payload checksums in the binary
+    package.
+
+ -- Yoga Book Linux Project <noreply@github.com>  Mon, 31 Aug 2026 23:45:00 +0200
+
+sof-topology-yogabook (1.0.0) unstable; urgency=medium
+
+  * Package the physically validated Yoga Book IPC3 RT5677 topology.
+
+ -- Yoga Book Linux Project <noreply@github.com>  Fri, 28 Aug 2026 20:29:13 +0200

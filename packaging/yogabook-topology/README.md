@@ -19,5 +19,5 @@ microphone validation:
 746962d80115e3b9b0b2fbe44673b4e3acef5f06f7914baf235a5a652e8be09c
 ```
 
-Install the resulting `sof-topology-yogabook_1.0.0_all.deb` together with
+Install the resulting `sof-topology-yogabook_1.0.1_all.deb` together with
 `firmware-sof-signed` and `alsa-ucm-conf-yogabook`.

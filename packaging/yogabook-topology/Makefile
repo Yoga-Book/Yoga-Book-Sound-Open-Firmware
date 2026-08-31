@@ -7,4 +7,4 @@ package:
 	bash build-deb.sh "$(TOPOLOGY)" "$(OUTPUT)"
 
 test: package
-	bash check-package.sh "$(OUTPUT)/sof-topology-yogabook_1.0.0_all.deb"
+	bash check-package.sh "$(OUTPUT)/sof-topology-yogabook_1.0.1_all.deb"

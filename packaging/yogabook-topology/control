@@ -1,5 +1,5 @@
 Package: sof-topology-yogabook
-Version: 1.0.0
+Version: 1.0.1
 Section: non-free-firmware/sound
 Priority: optional
 Architecture: all
